@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-05-26T13:39:41",
+  "run_dir": "prescribed_examples\\run_20260526_133941_n3",
+  "worker_script": "model_v1_old.py",
+  "worker_python": "C:/Users/wardbm1/gsas2main/python.exe",
+  "phase_names": [
+    "gamma",
+    "delta",
+    "gamma1",
+    "gamma2",
+    "laves",
+    "carbide"
+  ],
+  "param_types": [
+    "scale",
+    "mustrain",
+    "hstrain"
+  ],
+  "param_columns": [
+    "scale_gamma",
+    "mustrain_gamma",
+    "hstrain_gamma_D11",
+    "scale_delta",
+    "mustrain_delta",
+    "hstrain_delta_D11",
+    "scale_gamma1",
+    "mustrain_gamma1",
+    "hstrain_gamma1_D11",
+    "scale_gamma2",
+    "mustrain_gamma2",
+    "hstrain_gamma2_D11",
+    "scale_laves",
+    "mustrain_laves",
+    "hstrain_laves_D11",
+    "scale_carbide",
+    "mustrain_carbide",
+    "hstrain_carbide_D11"
+  ],
+  "n_examples": 3,
+  "notes": "Prescribed examples only. No Latin hypercube sampling. Each job sends a full 18-parameter dict to avoid state carryover."
+}

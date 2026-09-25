@@ -1,0 +1,1 @@
+The output files for one synthetic example are attatched for perusing. The MCMC h5 output is not included because of its large size (>1 gb).

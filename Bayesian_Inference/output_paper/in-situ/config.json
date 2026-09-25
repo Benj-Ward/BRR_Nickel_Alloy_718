@@ -1,0 +1,153 @@
+{
+  "run_name": "in-situ",
+  "reference_phase_index": 0,
+  "simplex_sum": 1.0,
+  "dataset": {
+    "label": "ID35",
+    "x_data": "data_dir/prescribed_examples/run_20260526_133941_n3/in-situ_x_spacing.npy",
+    "y_data": "data_dir/prescribed_examples/run_20260526_133941_n3/in-situ_pattern.npy",
+    "fxye_path": "data_dir/ED_ID35_reduced.fxye",
+    "data_ranges": [
+      [
+        0,
+        624
+      ]
+    ],
+    "Xray_wavelength": 0.172973
+  },
+  "surrogate": {
+    "run_dir": "F:\\ben_research\\training_data\\syncreton_training\\surrogates_final\\run_20260519_174722_seed700_main10000_2D_beta",
+    "pca_dir": "F:\\ben_research\\training_data\\syncreton_training\\pca_transforms\\run_20260519_174722_seed700_main10000_2D_beta"
+  },
+  "phases": [
+    {
+      "name": "gamma",
+      "scale_bounds": [
+        0.8,
+        1.0
+      ],
+      "mustrain_bounds": [
+        1000,
+        21000
+      ],
+      "hstrain_bounds": [
+        -0.0075,
+        0.0075
+      ]
+    },
+    {
+      "name": "delta",
+      "scale_bounds": [
+        1e-06,
+        0.1
+      ],
+      "mustrain_bounds": [
+        1000,
+        21000
+      ],
+      "hstrain_bounds": [
+        -0.0075,
+        0.00755
+      ]
+    },
+    {
+      "name": "gamma1",
+      "scale_bounds": [
+        1e-06,
+        0.1
+      ],
+      "mustrain_bounds": [
+        1000,
+        21000
+      ],
+      "hstrain_bounds": [
+        -0.0075,
+        0.0075
+      ]
+    },
+    {
+      "name": "gamma2",
+      "scale_bounds": [
+        1e-06,
+        0.1
+      ],
+      "mustrain_bounds": [
+        1000,
+        21000
+      ],
+      "hstrain_bounds": [
+        -0.0075,
+        0.0075
+      ]
+    },
+    {
+      "name": "laves",
+      "scale_bounds": [
+        1e-06,
+        0.04
+      ],
+      "mustrain_bounds": [
+        11000,
+        41000
+      ],
+      "hstrain_bounds": [
+        -0.0075,
+        0.0075
+      ]
+    },
+    {
+      "name": "carbide",
+      "scale_bounds": [
+        1e-06,
+        0.04
+      ],
+      "mustrain_bounds": [
+        11000,
+        41000
+      ],
+      "hstrain_bounds": [
+        -0.0075,
+        0.0075
+      ]
+    }
+  ],
+  "mcmc": {
+    "nwalkers_per_dim": 8,
+    "nsteps": 50000,
+    "moves": [
+      [
+        "StretchMove",
+        {
+          "a": 1.2
+        },
+        0.2
+      ],
+      [
+        "DEMove",
+        {},
+        0.6
+      ],
+      [
+        "DESnookerMove",
+        {},
+        0.2
+      ]
+    ],
+    "restart_mode": "fresh",
+    "perturb_n_best": 10,
+    "perturb_scale": 0.15,
+    "perturb_min_frac": 0.01
+  },
+  "gp": {
+    "n_iter": 4,
+    "peak_prominence": 2000000.0,
+    "rbf_length_scale": 900.0,
+    "rbf_length_bounds": [
+      64,
+      100000.0
+    ]
+  },
+  "likelihood": {
+    "epsilon": 100.0
+  }
+}

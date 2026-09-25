@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-05-29T09:42:37.157987",
+  "python_version": "3.13.5",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "git_hash": null,
+  "config_hash": "cad2cb378ffb",
+  "numpy_version": "2.3.1",
+  "emcee_version": "3.1.6"
+}

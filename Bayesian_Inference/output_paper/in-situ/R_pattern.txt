@@ -1,0 +1,2 @@
+# R_pattern (percent), unweighted profile R-factor: GP background mean vs true chebyschev-1 background
+3.280312400220943836e+00

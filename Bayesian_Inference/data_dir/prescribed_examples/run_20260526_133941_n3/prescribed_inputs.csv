@@ -1,0 +1,4 @@
+sample_id,example_id,description,scale_gamma,mustrain_gamma,hstrain_gamma_D11,scale_delta,mustrain_delta,hstrain_delta_D11,scale_gamma1,mustrain_gamma1,hstrain_gamma1_D11,scale_gamma2,mustrain_gamma2,hstrain_gamma2_D11,scale_laves,mustrain_laves,hstrain_laves_D11,scale_carbide,mustrain_carbide,hstrain_carbide_D11
+0,as-built,Three phases,0.98,8000,0.0025,0,1000,0,0,1000,0,0,1000,0,0.012,19000,0.004,0.008,25000,0.002
+1,in-situ,Six phases,0.88,7000,0.002,0.03,12000,0.0005,0.03,10000,-0.0012,0.04,6000,0.002,0.01,17000,0.003,0.01,22000,0.001
+2,homogenized,Five phases,0.81,6000,0.001,0.02,12000,0.0003,0.06,8000,0.0005,0.1,5000,-0.0008,1e-08,15000,0.002,0.01,20000,0.0005
