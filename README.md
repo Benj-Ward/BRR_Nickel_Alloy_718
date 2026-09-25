@@ -2,14 +2,17 @@
 Codebase for the scientific paper "Bayesian Rietveld refinement to estimate phase fractions of additively manufactured Nickel Alloy 718"
 
 --- Objective --- 
+
 The objective of this code is to perform Bayesian Rietveld Refinement for the Nickel Alloy 718 system using a surrogate model. In the paper, synthetic and laboratory examples are analyzed. In this codebase, we provide only the synthetic data, as our laboratory data is proprietary to the Tao Sun Group at Northwestern University. However, the scripts for both kinds of data are essentially the same.
 
 --- Codebase Outline ---
+
 This project contains two substantial computational efforts:
 1. "Surrogate_Modeling"
 2. "Bayesian_Inference"
 
 --- Surrogate_Modeling ---
+
 The second effort depends on the first. We provide 3 scripts, 1 dependency, and a data directory to train a random forest surrogate model for X-ray diffraction of Nickel Alloy 718. 
 
 The data directory in Surrogate_Modeling contains a parameter file containing info on the laboratory setup and a phase directory with CIF files, which encode our assumptions about the crystalographic features of Nickel Alloy 718.
@@ -21,6 +24,7 @@ Run the scripts in this order: driver_lhs_v1 -> prep_and_pca_fixed_pc_stats -> t
 model_v1_old is the dependency that runs GSAS-II as a subprocess. driver_lhs_v1 launches 6 workers by default, which may be too many for your machine due to the high RAM use of GSAS-II.
 
 --- Bayesian Inference ---
+
 We provide 6 scripts, 2 dependencies, a config file, a data directory, and a sub-selection of output files (everything except the raw output of MCMC). 
 
 The data directory contains the parameter file and CIF files in addition to a script (driver_three_examples) to create synthetic X-ray diffraction data using GSAS-II. We provide the output of this script in a sub-directory called prescribed_examples.
